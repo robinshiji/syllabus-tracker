@@ -1,0 +1,318 @@
+
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #e0e7ff;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      scroll-padding-top: 80px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus {
+      outline: 3px solid #3b82f6;
+      outline-offset: 2px;
+      outline-radius: 6px;
+    }
+    button {
+      cursor: pointer;
+      user-select: none;
+      font-family: inherit;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+	.nav-logo img {
+  height: 60px;
+  width: auto;
+}
+    /* BUTTON with glowing electric style */
+    .btn-glow {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      box-shadow: 0 0 15px #2563ebcc, 0 0 35px #3b82f699;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+    .btn-glow:hover,
+    .btn-glow:focus {
+      box-shadow:
+        0 0 25px #2563ebff,
+        0 0 60px #3b82f6ff,
+        0 6px 15px #3b82f6cc;
+      transform: scale(1.05);
+      outline: none;
+    }
+    /* Center sections */
+    section, header {
+      padding: 4rem 1rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      user-select: none;
+    }
+
+    /* Hero Section */
+    header.hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    header.hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #dbeafe;
+      text-shadow: 0 0 12px #3b82f6bb;
+      user-select:none;
+    }
+    header.hero p {
+      font-size: 1.2rem;
+      color: #a5b4fc;
+      user-select:none;
+    }
+
+    /* Syllabus Section */
+    section#syllabus h2 {
+      color: #3b82f6;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 8px #2563ebcc;
+    }
+    .syllabus-group {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .syllabus-group h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #60a5fa;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 0 4px #2563ebbb;
+    }
+    .syllabus-group ul {
+      margin: 0;
+      padding-left: 1.3rem;
+      color: #cbd5e1;
+      font-size: 1rem;
+      line-height: 1.5;
+      user-select:none;
+    }
+    .syllabus-group ul li {
+      margin-bottom: 0.4rem;
+    }
+    /* PDF Download button */
+    .pdf-download {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .pdf-download a.btn-glow {
+      font-size: 1.05rem;
+    }
+
+    /* Career Opportunities */
+    section#careers {
+      color: #cbd5e1;
+    }
+    section#careers h2 {
+      color: #3b82f6;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-shadow: 0 0 8px #2563ebcc;
+    }
+    .career-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 2.5rem;
+      text-align: left;
+      user-select:none;
+    }
+    .career-card {
+      background: #1e293b;
+      border-radius: 14px;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 0 18px #3b82f611;
+      transition: box-shadow 0.3s ease, transform 0.25s ease;
+      color: #e0e7ff;
+      cursor: default;
+    }
+    .career-card:hover,
+    .career-card:focus-within {
+      box-shadow:
+        0 0 40px 3px #2563ebcc,
+        0 12px 35px #1e40afbb;
+      transform: translateY(-6px);
+      outline: none;
+      color: #93c5fd;
+    }
+    .career-card h3 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 8px #2563ebbb;
+    }
+    .career-card p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #cbd5e1;
+    }
+
+    /* Ask Your Doubt Section */
+    section#ask-doubt {
+      max-width: 600px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+    section#ask-doubt h2 {
+      color: #3b82f6;
+      font-weight: 700;
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 8px #2563ebcc;
+      user-select:none;
+    }
+    form {
+      background: rgba(59, 130, 246, 0.15);
+      padding: 2.5rem 2rem;
+      border-radius: 18px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 15px 40px rgb(59 130 246 / 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      user-select:none;
+    }
+    label {
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: left;
+      user-select:none;
+      display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      border-radius: 12px;
+      border: 2px solid transparent;
+      background: rgba(255 255 255 / 0.1);
+      padding: 12px 16px;
+      color: #e0e7ff;
+      font-family: inherit;
+      font-size: 1rem;
+      resize: vertical;
+      box-shadow: inset 0 0 10px rgb(255 255 255 / 0.06);
+      transition: border-color 0.3s ease, background 0.3s ease;
+      width: 100%;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(255,255,255,0.6);
+      font-style: italic;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #3b82f6;
+      background: rgba(255 255 255 / 0.2);
+      box-shadow: 0 0 18px #3b82f6;
+    }
+    button[type="submit"] {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 3rem;
+      font-size: 1.15rem;
+      border-radius: 14px;
+      border: none;
+      box-shadow: 0 8px 24px rgb(37 99 235 / 0.8);
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select:none;
+    }
+    button[type="submit"]:hover,
+    button[type="submit"]:focus {
+      background: linear-gradient(90deg, #2563eb, #1d4ed8);
+      box-shadow: 0 12px 40px rgb(25 54 224 / 0.95);
+      outline: none;
+      transform: scale(1.05);
+    }
+    .thank-you-msg {
+      margin-top: 1rem;
+      color: #6ee7b7;
+      font-weight: 700;
+      font-size: 1rem;
+      display: none;
+      user-select:none;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+      padding: 2rem 1rem;
+      user-select: none;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    footer a {
+      color: #60a5fa;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    footer a:hover,
+    footer a:focus {
+      color: #3b82f6;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header.hero h1 {
+        font-size: 2.4rem;
+      }
+      header.hero p {
+        font-size: 1rem;
+      }
+      .career-cards {
+        grid-template-columns: 1fr;
+      }
+      section#syllabus,
+      section#careers,
+      section#ask-doubt {
+        padding: 3rem 1rem 2.5rem;
+      }
+    }
